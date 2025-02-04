@@ -1,0 +1,20 @@
+<h1>Employees</h1>
+
+<table border="1">
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Occupation</th>
+        <th>Company</th>
+    </tr>
+    <% if (typeof employees !=="undefined" && employees.length> 0) { %>
+        <% employees.forEach(employee => { %>
+            <%- include("partials/employee", { employee }) %>
+        <% }); %>
+    <% } else { %>
+        <tr>
+            <td colspan="5">There are no employees to show.</td>
+        </tr>
+    <% } %>
+</table>
