@@ -1,0 +1,25 @@
+<% if (employee.visible) { %>
+    <tr>
+        <td>
+            <img src="/images/<%- employee.imageUrl %>" alt="<%= employee.name %>"/>
+        </td>
+        <td>
+            <%= employee.name %>
+        </td>
+        <td>
+            <%= employee.age %>
+        </td>
+        <td>
+            <%= employee.occupation %>
+        </td>
+        <td>
+            <%= employee.company %>
+        </td>
+    </tr>
+<% } else { %>
+    <tr>
+        <td colspan="5">
+            <%= employee.name %> has hidden their information.
+        </td>
+    </tr>
+<% } %>
